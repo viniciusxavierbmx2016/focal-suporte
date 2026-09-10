@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Suporte — Focal</title>
+<meta name="description" content="Suporte do Focal, câmera manual e editor de fotos para iPhone. Contato e perguntas frequentes.">
+<meta name="color-scheme" content="dark">
+<style>
+  /* Paleta do app — docs/16-SISTEMA-VISUAL.md §1. Escrita aqui como valor, não importada:
+     a página não carrega nada de fora. */
+  :root {
+    --bg:               #000000;
+    --surface:          #161618;
+    --surface-raised:   #1C1C1F;
+    --surface-inset:    #232326;
+    --text-primary:     #F5F5F7;
+    --text-secondary:   #8A8A8E;
+    --text-tertiary:    #6A6A6E;
+    --amber:            #E8A444;
+    --on-amber:         #2A1A06;
+    --linha:            #2E2E32;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    padding: 0 20px env(safe-area-inset-bottom);
+  }
+
+  .folha { max-width: 620px; margin: 0 auto; padding: 56px 0 72px; }
+
+  /* ── Cabeçalho ───────────────────────────────────────────────────────── */
+  header { padding-bottom: 32px; border-bottom: 1px solid var(--linha); }
+
+  h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+    line-height: 1.15;
+  }
+
+  .subtitulo {
+    margin: 6px 0 0;
+    color: var(--text-secondary);
+    font-size: 17px;
+  }
+
+  .marca {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--surface-inset);
+    color: var(--text-tertiary);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ── Contato ─────────────────────────────────────────────────────────── */
+  .contato {
+    margin: 32px 0 8px;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--linha);
+    border-radius: 14px;
+  }
+
+  .contato h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .contato p { margin: 0 0 18px; color: var(--text-secondary); font-size: 16px; }
+
+  .email {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 999px;
+    background: var(--amber);
+    color: var(--on-amber);
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    word-break: break-word;
+  }
+
+  .email:hover, .email:focus { filter: brightness(1.08); }
+
+  /* ── Perguntas ───────────────────────────────────────────────────────── */
+  h2.secao {
+    margin: 56px 0 8px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-tertiary);
+  }
+
+  .pergunta {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--linha);
+  }
+
+  .pergunta:last-of-type { border-bottom: none; }
+
+  .pergunta h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .pergunta p {
+    margin: 0 0 12px;
+    color: var(--text-secondary);
+    font-size: 16px;
+  }
+
+  .pergunta p:last-child { margin-bottom: 0; }
+
+  .pergunta strong { color: var(--text-primary); font-weight: 600; }
+
+  /* Caminho de menu do iPhone — monoespaçada, como todo número do app. */
+  .caminho {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 6px;
+    background: var(--surface-inset);
+    color: var(--text-primary);
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  ol { margin: 0 0 12px; padding-left: 22px; color: var(--text-secondary); font-size: 16px; }
+  ol li { margin-bottom: 6px; }
+  ol li:last-child { margin-bottom: 0; }
+
+  /* ── Rodapé ──────────────────────────────────────────────────────────── */
+  footer {
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid var(--linha);
+    color: var(--text-tertiary);
+    font-size: 14px;
+  }
+
+  footer a { color: var(--text-secondary); text-decoration: underline; text-underline-offset: 3px; }
+  footer a:hover, footer a:focus { color: var(--text-primary); }
+  footer p { margin: 0 0 10px; }
+  footer p:last-child { margin-bottom: 0; }
+
+  @media (max-width: 480px) {
+    body { font-size: 16px; }
+    .folha { padding: 40px 0 56px; }
+    h1 { font-size: 28px; }
+    .contato { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="folha">
+
+  <header>
+    <span class="marca">Suporte</span>
+    <h1>Focal</h1>
+    <p class="subtitulo">Câmera manual e editor de fotos</p>
+  </header>
+
+  <section class="contato">
+    <h2>Fale comigo</h2>
+    <p>Dúvida, problema ou sugestão: escreva. A resposta costuma sair em até 2 dias úteis.</p>
+    <a class="email" href="mailto:viniciusxavierbmx2016@gmail.com">viniciusxavierbmx2016@gmail.com</a>
+  </section>
+
+  <h2 class="secao">Perguntas frequentes</h2>
+
+  <div class="pergunta">
+    <h3>Como assino o Focal Pro, e o que vem nele</h3>
+    <p>A assinatura fica dentro do app, na tela que aparece quando você toca num recurso Pro. São dois planos: <strong>mensal</strong> e <strong>anual</strong>. O pagamento é feito pela Apple, com a conta que você já usa na App Store.</p>
+    <p>O Pro libera o acervo completo de presets, o editor a fundo (Tons, Mistura de cores e gradação), captura em ProRAW e 48MP, e as sobreposições.</p>
+    <p>A câmera manual continua completa e gratuita: obturador, ISO, foco, balanço de branco e compensação de exposição, com um punhado de presets ao vivo, ajustes básicos e exportação.</p>
+  </div>
+
+  <div class="pergunta">
+    <h3>Como cancelo a assinatura</h3>
+    <p>O cancelamento é feito nos <strong>Ajustes do iPhone</strong>, não dentro do Focal — a Apple controla a cobrança, e eu não tenho como cancelar por você.</p>
+    <ol>
+      <li>Abra <span class="caminho">Ajustes</span> no iPhone</li>
+      <li>Toque no seu nome, no topo</li>
+      <li><span class="caminho">Assinaturas</span></li>
+      <li>Escolha <strong>Focal</strong> e toque em <span class="caminho">Cancelar assinatura</span></li>
+    </ol>
+    <p>Ao cancelar, o Pro continua valendo até o fim do período que você já pagou. Depois disso o app volta ao gratuito, e nenhuma foto sua é apagada.</p>
+  </div>
+
+  <div class="pergunta">
+    <h3>Como funciona o teste grátis de 7 dias</h3>
+    <p>O teste grátis existe <strong>apenas no plano anual</strong>. Quem assina o mensal paga desde o primeiro dia.</p>
+    <p>No anual, os <strong>7 primeiros dias</strong> são gratuitos: o Pro fica inteiro liberado e nada é cobrado. A cobrança do ano só acontece ao fim do sétimo dia.</p>
+    <p>Se você cancelar antes disso, nos <span class="caminho">Ajustes</span> do iPhone, não paga nada — e o Pro continua funcionando até o dia em que o teste terminaria.</p>
+    <p>O teste vale uma vez por conta da Apple.</p>
+  </div>
+
+  <div class="pergunta">
+    <h3>Troquei de iPhone. Como recupero minha assinatura</h3>
+    <p>A assinatura está ligada à sua <strong>conta da Apple</strong>, não ao aparelho. No iPhone novo, entre com a mesma conta, instale o Focal e toque em <strong>Restaurar compras</strong>, na tela de assinatura.</p>
+    <p>Se depois disso o Pro não voltar, me escreva. Diga o e-mail da conta da Apple usada na compra — só isso, não preciso de senha nem de comprovante.</p>
+    <p>⚠ As fotos não viajam junto: elas ficam no aparelho antigo. Para levá-las, exporte para o rolo do iPhone antes de trocar.</p>
+  </div>
+
+  <div class="pergunta">
+    <h3>Onde ficam minhas fotos. O app envia algo para servidor?</h3>
+    <p><strong>Não envia nada.</strong> O Focal não tem servidor, não tem conta de usuário e não faz backup na nuvem. Não há rastreador, analytics nem publicidade.</p>
+    <p>Suas fotos ficam no armazenamento do próprio iPhone, dentro do app. As que você exporta vão para o rolo, como qualquer outra foto sua. Nada sai do aparelho a não ser que você compartilhe.</p>
+    <p>Por isso vale insistir: <strong>faça backup do iPhone</strong>. Se o aparelho se perder e as fotos não tiverem sido exportadas, não há cópia em lugar nenhum — nem comigo.</p>
+  </div>
+
+  <div class="pergunta">
+    <h3>Apaguei uma foto sem querer</h3>
+    <p>Foto apagada no Focal vai para a <strong>lixeira</strong> e fica lá por <strong>30 dias</strong> antes de sumir de vez. Dá tempo de recuperar.</p>
+    <p>Abra a galeria do app e procure as excluídas. Escolha a foto e restaure — ela volta com a edição que tinha.</p>
+    <p>Se já passou dos 30 dias, ou se a foto foi apagada do rolo do iPhone, vale olhar em <span class="caminho">Fotos › Álbuns › Apagadas recentemente</span>, que tem uma lixeira própria, também de 30 dias.</p>
+  </div>
+
+  <div class="pergunta">
+    <h3>Como exporto o arquivo RAW original</h3>
+    <p>Abra a foto no Focal, toque no menu de opções e escolha exportar. Quando a foto foi capturada em RAW ou importada como RAW, aparece a opção de <strong>RAW original</strong>.</p>
+    <p>Ela entrega o negativo digital como ele saiu do sensor, sem preset e sem nenhuma edição aplicada — é o arquivo para levar ao Lightroom ou ao Capture One.</p>
+    <p>Se essa opção não aparecer, a foto não é RAW. Nesse caso as opções são exportar com o look aplicado ou sem ele.</p>
+  </div>
+
+  <div class="pergunta">
+    <h3>Em qual iPhone o app funciona</h3>
+    <p>O Focal pede <strong>iOS 16.6 ou mais recente</strong>, e é feito só para iPhone — não tem versão para iPad.</p>
+    <p>Alguns recursos dependem do que o seu aparelho oferece: <strong>ProRAW</strong> e <strong>48MP</strong> existem apenas nos modelos Pro que trazem esses formatos. Quando o iPhone não suporta, a opção não aparece.</p>
+    <p>Para ver a sua versão do iOS: <span class="caminho">Ajustes › Geral › Sobre</span>.</p>
+  </div>
+
+  <footer>
+    <p><a href="https://viniciusxavierbmx2016.github.io/focal-privacidade/">Política de privacidade</a></p>
+    <p>2026 Vinicius Xavier Ribeiro</p>
+  </footer>
+
+</div>
+</body>
+</html>
